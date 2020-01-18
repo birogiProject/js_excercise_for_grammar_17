@@ -28,6 +28,11 @@ class Animal {
 	constructor(name) {
 		this._name = name;
 	}
+
+	get name() {
+		return this._name;
+	}
+
 	speak() {
 		console.log('...(無言)');
 	}
@@ -38,7 +43,7 @@ class Person extends Animal {
 		super(name);
 	}
 	speak() {
-		console.log(`こんにちは、${this._name}です。`);
+		console.log(`こんにちは、${this.name}です。`);
 		super.speak();
 	}
 }
